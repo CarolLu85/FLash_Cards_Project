@@ -34,6 +34,7 @@ def flip_card():
 
 def remove_data():
     to_learn.remove(current_card)
+    # save to a new file after known items removed as a csv file called "word_to_learn" for next time reading this file.
     data = pandas.DataFrame(to_learn)
     data.to_csv("word_to_learn.csv", index=False)
 
